@@ -1,0 +1,29 @@
+{
+  "module":{
+    "name":"altera_avalon_timer",
+    "version":"18.1",
+    "parameters":[
+     {"name":"alwaysRun", "def":"false"},
+     {"name":"counterSize", "def":"32"},
+     {"name":"fixedPeriod", "def":"false"},
+     {"name":"period", "def":"1"},
+     {"name":"periodUnits", "def":"MSEC"},
+     {"name":"resetOutput", "def":"false"},
+     {"name":"snapshot", "def":"true"},
+     {"name":"systemFrequency", "def":"100000000"},
+     {"name":"timeoutPulseOutput", "def":"false"},
+     {"name":"watchdogPulse", "def":"2"}
+    ]
+  },
+  "hw":[
+    {
+      "interface":"avalon_slave",
+      "name":"s1",
+      "parameters":[
+        {"signal":"address", "name":"SPAN", "value":"2"},
+        {"signal":"read_data", "name":"BIT_WIDTH", "value":"32"},
+        {"signal":"write_data", "name":"BIT_WIDTH", "value":"32"}
+      ]
+    }
+  ]
+}
